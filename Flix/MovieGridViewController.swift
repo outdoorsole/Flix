@@ -23,6 +23,16 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        // Use layout class to customize grid layout
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        // Controls the space in between the rows
+        layout.minimumLineSpacing = 4
+        layout.minimumInteritemSpacing = 4
+
+        // frame: the frame rectangle, which describes the view's location and size in its superview's coordinate system
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3
+        layout.itemSize = CGSize(width: width, height: width * 3/2)
+        
         // CREATE A NETWORK REQUEST (for similar movies)
         // URL: a value that identifies the location of a resource, such as an item on a remote server or the path to a local file
         // Uniform Resource Locator (URL): web address
