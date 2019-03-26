@@ -9,7 +9,9 @@
 import UIKit
 
 class MoviesViewController: UIViewController {
-
+    // MARK: = Properties
+    var movies = [[String: Any]]()  // Initialize an array of dictionaries to store the movies that will come back from the request
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,8 +44,10 @@ class MoviesViewController: UIViewController {
                 // Cast as a dictionary
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 print(dataDictionary)
-                // TODO: Get the array of movies
-                // TODO: Store the movies in a property to use elsewhere
+                
+                // Access the results key inside of the dictionary (contains the list of movies)
+                self.movies = dataDictionary["results"] as! [[String: Any]]
+                
                 // TODO: Reload your table view data
             }
         }
