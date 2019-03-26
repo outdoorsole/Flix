@@ -9,6 +9,8 @@
 import UIKit
 
 class MovieGridViewController: UIViewController {
+    @IBOutlet var collectionView: UICollectionView!
+    
     // MARK: - Properties
     var movies = [[String: Any]]()
     
