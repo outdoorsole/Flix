@@ -67,14 +67,19 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        // Change from having individual cells to re-using (recycling) cells
+        // Helps with saving memory
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
         
         // Access the current movie
         let movie = movies[indexPath.row]
         let title = movie["title"] as! String
+        let synopsis = movie["overview"] as! String
         
         // The value of the row element at that indexPath
-        cell.textLabel?.text = title
+        cell.titleLabel?.text = title
+        cell.synopsisLabel.text = synopsis
+        
         return cell
     }
     
