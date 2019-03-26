@@ -93,4 +93,27 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        print("Loading up the details screen")
+        
+        // Find the selected movie (sender is the selected cell)
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+        
+        // Pass the selected movie to the details view controller
+        // This will be the destination
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        // Set the property
+        detailsViewController.movie = movie
+        
+        // Deselect the row so it is no longer highlighted after being tapped
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
