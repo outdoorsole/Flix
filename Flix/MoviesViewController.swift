@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // MARK: - Outlets
@@ -85,6 +86,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let posterPath = movie["poster_path"] as! String
         // URL validates that it's correctly formed (in comparison to String)
         let posterURL = URL(string: baseURL + size + posterPath)
+        
+        // Downloads and sets the image
+        cell.posterView.af_setImage(withURL: posterURL!)
         
         return cell
     }
