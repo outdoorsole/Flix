@@ -18,12 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="7CE-21-1V1">
-                                <rect key="frame" x="118" y="255" width="138" height="139"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="7CE-21-1V1">
+                                <rect key="frame" x="118.5" y="264" width="138" height="139"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0Q-Ab-rXo">
+                                <rect key="frame" x="148" y="413" width="79" height="65"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7CE-21-1V1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="2VB-S3-iyQ"/>
+                            <constraint firstItem="7CE-21-1V1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8hX-Jt-09Y"/>
+                            <constraint firstItem="I0Q-Ab-rXo" firstAttribute="centerX" secondItem="7CE-21-1V1" secondAttribute="centerX" id="DRg-Rw-Wd1"/>
+                            <constraint firstItem="I0Q-Ab-rXo" firstAttribute="top" secondItem="7CE-21-1V1" secondAttribute="bottom" constant="10" id="sEP-oa-raq"/>
+                            <constraint firstItem="7CE-21-1V1" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="teg-R8-9Cp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
