@@ -53,7 +53,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                 // Access the results key inside of the dictionary (contains the list of movies)
                 self.movies = dataDictionary["results"] as! [[String: Any]]
                 
-                // TODO: Reload your table view data
+                // Reload data after the completion handler gets the list of movies and assigns it to the MoviesViewController movies property
+                self.tableView.reloadData()
             }
         }
         task.resume()
@@ -61,14 +62,19 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     // MARK: - Table view data source required methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        // the number of movie objects in the array
+        return movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
+        // Access the current movie
+        let movie = movies[indexPath.row]
+        let title = movie["title"] as! String
+        
         // The value of the row element at that indexPath
-        cell.textLabel?.text = "row: \(indexPath.row)"
+        cell.textLabel?.text = title
         return cell
     }
     
