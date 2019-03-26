@@ -24,7 +24,11 @@ class MovieDetailsViewController: UIViewController {
         print(movie["title"])
         
         titleLabel.text = movie["title"] as? String
+        // Resizes and moves the receiver view so it just encloses its subviews
+        titleLabel.sizeToFit()
+        
         synopsisLabel.text = movie["overview"] as? String
+        synopsisLabel.sizeToFit()
         
         let baseURL = "https://image.tmdb.org/t/p/"
         let posterSize = "w185"
