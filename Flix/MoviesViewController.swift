@@ -8,7 +8,10 @@
 
 import UIKit
 
-class MoviesViewController: UIViewController {
+class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    // MARK: - Outlets
+    @IBOutlet weak var tableView: UITableView!
+    
     // MARK: = Properties
     var movies = [[String: Any]]()  // Initialize an array of dictionaries to store the movies that will come back from the request
     
@@ -16,6 +19,8 @@ class MoviesViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tableView.dataSource = self
+        tableView.delegate = self
         
         // CREATE A NETWORK REQUEST
         // URL: a value that identifies the location of a resource, such as an item on a remote server or the path to a local file
@@ -53,4 +58,18 @@ class MoviesViewController: UIViewController {
         }
         task.resume()
     }
+    
+    // MARK: - Table view data source required methods
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        
+        // The value of the row element at that indexPath
+        cell.textLabel?.text = "row: \(indexPath.row)"
+        return cell
+    }
+    
 }
