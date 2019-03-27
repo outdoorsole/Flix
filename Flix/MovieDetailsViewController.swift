@@ -13,8 +13,9 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
-    
+    @IBOutlet weak var releaseDateLabel: UILabel!
     // MARK: - Properties
+    
     var movie: [String: Any]!
     
     override func viewDidLoad() {
@@ -28,6 +29,9 @@ class MovieDetailsViewController: UIViewController {
         titleLabel.sizeToFit()
         
         synopsisLabel.text = movie["overview"] as? String
+        synopsisLabel.sizeToFit()
+        
+        releaseDateLabel.text = movie["release_date"] as? String
         synopsisLabel.sizeToFit()
         
         let baseURL = "https://image.tmdb.org/t/p/"
