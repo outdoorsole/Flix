@@ -18,6 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="134" id="bxD-g4-uAK" customClass="MovieCell" customModule="Flix" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="134"/>
@@ -26,26 +27,41 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TOP-kl-NVO">
-                                            <rect key="frame" x="16" y="11" width="72" height="112"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TOP-kl-NVO">
+                                            <rect key="frame" x="8" y="8" width="72" height="117.5"/>
                                             <color key="backgroundColor" red="0.31372549019607843" green="0.43137254901960786" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="72" id="B4E-vd-iPu"/>
+                                                <constraint firstAttribute="height" constant="117.5" id="dKY-9e-V6J"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1B-Oe-ALT">
-                                            <rect key="frame" x="108" y="16" width="204" height="29"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1B-Oe-ALT">
+                                            <rect key="frame" x="88" y="8" width="279" height="29"/>
+                                            <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUU-Vz-kaC">
-                                            <rect key="frame" x="108" y="53" width="204" height="66"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUU-Vz-kaC">
+                                            <rect key="frame" x="88" y="45" width="279" height="20.5"/>
+                                            <color key="backgroundColor" red="0.36862745099999999" green="0.52941176469999995" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="TOP-kl-NVO" firstAttribute="leading" secondItem="wXp-a3-VDv" secondAttribute="leading" constant="8" id="2aM-q3-Pcx"/>
+                                        <constraint firstItem="TOP-kl-NVO" firstAttribute="top" secondItem="wXp-a3-VDv" secondAttribute="top" constant="8" id="9E0-sF-dSG"/>
+                                        <constraint firstItem="vUU-Vz-kaC" firstAttribute="top" secondItem="r1B-Oe-ALT" secondAttribute="bottom" constant="8" id="CDD-ZW-CTu"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vUU-Vz-kaC" secondAttribute="bottom" constant="8" id="KaI-aO-lTx"/>
+                                        <constraint firstAttribute="trailing" secondItem="vUU-Vz-kaC" secondAttribute="trailing" constant="8" id="aEW-8S-FCU"/>
+                                        <constraint firstAttribute="trailing" secondItem="r1B-Oe-ALT" secondAttribute="trailing" constant="8" id="fuL-F5-AbD"/>
+                                        <constraint firstItem="vUU-Vz-kaC" firstAttribute="leading" secondItem="r1B-Oe-ALT" secondAttribute="leading" id="joM-wK-TPG"/>
+                                        <constraint firstAttribute="bottom" secondItem="TOP-kl-NVO" secondAttribute="bottom" constant="8" id="kg2-6i-w5w"/>
+                                        <constraint firstItem="r1B-Oe-ALT" firstAttribute="top" secondItem="TOP-kl-NVO" secondAttribute="top" id="moq-YT-y3v"/>
+                                        <constraint firstItem="r1B-Oe-ALT" firstAttribute="leading" secondItem="TOP-kl-NVO" secondAttribute="trailing" constant="8" id="zuI-Wg-dst"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="posterView" destination="TOP-kl-NVO" id="IIX-jb-KOg"/>
