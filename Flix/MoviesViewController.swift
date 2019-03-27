@@ -23,6 +23,10 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.dataSource = self
         tableView.delegate = self
         
+        // The height of each row in the table view
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 50
+        
         // CREATE A NETWORK REQUEST
         // URL: a value that identifies the location of a resource, such as an item on a remote server or the path to a local file
         // Uniform Resource Locator (URL): web address
