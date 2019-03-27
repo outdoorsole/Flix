@@ -36,7 +36,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1B-Oe-ALT">
-                                            <rect key="frame" x="88" y="8" width="279" height="29"/>
+                                            <rect key="frame" x="88" y="8" width="61.5" height="29"/>
                                             <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                             <nil key="textColor"/>
@@ -56,7 +56,7 @@
                                         <constraint firstItem="vUU-Vz-kaC" firstAttribute="top" secondItem="r1B-Oe-ALT" secondAttribute="bottom" constant="8" id="CDD-ZW-CTu"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vUU-Vz-kaC" secondAttribute="bottom" constant="8" id="KaI-aO-lTx"/>
                                         <constraint firstAttribute="trailing" secondItem="vUU-Vz-kaC" secondAttribute="trailing" constant="8" id="aEW-8S-FCU"/>
-                                        <constraint firstAttribute="trailing" secondItem="r1B-Oe-ALT" secondAttribute="trailing" constant="8" id="fuL-F5-AbD"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="r1B-Oe-ALT" secondAttribute="trailing" constant="8" id="fuL-F5-AbD"/>
                                         <constraint firstItem="vUU-Vz-kaC" firstAttribute="leading" secondItem="r1B-Oe-ALT" secondAttribute="leading" id="joM-wK-TPG"/>
                                         <constraint firstAttribute="bottom" secondItem="TOP-kl-NVO" secondAttribute="bottom" constant="8" id="kg2-6i-w5w"/>
                                         <constraint firstItem="r1B-Oe-ALT" firstAttribute="top" secondItem="TOP-kl-NVO" secondAttribute="top" id="moq-YT-y3v"/>
