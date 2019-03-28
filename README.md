@@ -18,4 +18,4 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
  - The table view grows to accommodate the content (poster, title, and synopsis information)
    - [X] Dynamic Height Cells
    
-<img src="http://g.recordit.co/xUSm8Iyyrr.gif" width=250><br>
+<img src="http://g.recordit.co/lGysD2JX2P.gif" width=250><br>
