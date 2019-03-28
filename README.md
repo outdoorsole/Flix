@@ -11,4 +11,11 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [ ] User can tap a poster in the collection view to see a detail screen of that movie.
 - [ ] In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
 
+- The following screens use AutoLayout to adapt to various orientations and screen sizes
+   - [X] Movie feed view
+   - [X] Movie detail view
+   
+ - The table view grows to accommodate the content (poster, title, and synopsis information)
+   - [X] Dynamic Height Cells
+   
 <img src="http://g.recordit.co/xUSm8Iyyrr.gif" width=250><br>
