@@ -22,16 +22,25 @@ class MovieDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(movie["title"])
         
+        // DateFormatter(): A formatter that converts between dates and their textual representations
+        let dateFormatter = DateFormatter()
+        let releaseDate = movie["release_date"] as! String
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.locale = Locale(identifier: "en_US")
+        
+        if let date = dateFormatter.date(from: releaseDate) {
+            // Change the date format to month abbreviation, day with leading zeros, and year
+            let displayFormatter = DateFormatter()
+            displayFormatter.dateFormat = "MMMM dd, y"
+            releaseDateLabel.text = displayFormatter.string(from: date)
+        }
+
         titleLabel.text = movie["title"] as? String
         // Resizes and moves the receiver view so it just encloses its subviews
         titleLabel.sizeToFit()
         
         synopsisLabel.text = movie["overview"] as? String
-        synopsisLabel.sizeToFit()
-        
-        releaseDateLabel.text = movie["release_date"] as? String
         synopsisLabel.sizeToFit()
         
         let baseURL = "https://image.tmdb.org/t/p/"
